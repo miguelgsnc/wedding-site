@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap');
+
+@font-face {
+  font-family: calisto;
+  src: url(/public/CALIST.TTF);
+}
+.font-calisto {
+  font-family: calisto;
+}
+
+@font-face {
+  font-family: dubai;
+  src: url(/public/DUBAI-LIGHT.TTF);
+}
+.font-dubai {
+  font-family: dubai;
+}
+
+.welcome-section {
+  min-height: 100vh;
+  background-image: url('../images/beach1.jpg');
+  background-size: auto 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Removed: color: white; */ 
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+
+/* Target the specific h1 elements used for the name lines */
+.welcome-content h1 {
+  /* This overrides the large default browser margin for h1 elements */
+  margin-top: 1;
+  margin-bottom: 1;
+  
+  /* You can use line-height to fine-tune vertical spacing */
+  line-height: 1.2; 
+}
+
+/* New styles for positioning and color */
+.welcome-content {
+  /* Use absolute positioning relative to .welcome-section */
+  position: absolute;
+  top: 25vh; /* Moves the content down to roughly the 1/3 mark from the top */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the element's width/height */
+  
+  /* Set all text inside to black by default */
+  color: black; 
+  
+  /* Ensure content is positioned above the background image/section */
+  z-index: 10; 
+  
+  /* Add some default padding to make sure text isn't right on the edge (optional) */
+  padding: 1rem;
+}
+
+/* Make the couple’s names more elegant and explicitly black */
+.welcome-section h1 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 500;
+  color: black; /* Explicitly set H1 to black */
+}
+
+
+/* For Miguel & Tiza */
+.text-couple-name {
+  font-size: 60px; /* Base size for mobile */
+}
+/* For Miguel & Tiza */
+.text-couple-name-and {
+  font-size: 25px; /* Base size for mobile */
+}
+@media (min-width: 768px) { /* md: equivalent in Tailwind */
+  .text-couple-name-md {
+    font-size: 72px; /* Larger size for desktop */
+  }
+}
+
+/* For "We are getting married!" */
+.text-tagline {
+  font-size: 16px; /* Base size for mobile */
+}
+@media (min-width: 768px) {
+  .text-tagline-md {
+    font-size: 18px; /* Larger size for desktop */
+  }
+}
+
+/* For Date and Location */
+.text-details {
+  font-size: 12px; /* Base size for mobile */
+}
+@media (min-width: 768px) {
+  .text-details-md {
+    font-size: 14px; /* Larger size for desktop */
+  }
+}
+
+/* Note: You must remove the previous h1 style for the font-size to take effect
+   or ensure this new class overrides it: */
+.welcome-section h1 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: black; 
+  /* Remove any conflicting font-size property here */
+}
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap');
+
+.welcome-section {
+  min-height: 100vh;
+  background-image: url('../images/beach1.jpg');
+  background-size: auto 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.233);
+  border-radius: 1rem;
+}
+
+
+.welcome-section h1 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: #fff;
+}
+*/

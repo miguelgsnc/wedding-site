@@ -1,4 +1,7 @@
 import React from 'react';
+import sampleMaleColors from '../images/sample_male_suit.jpg';
+import sampleFemaleColors from '../images/sample_women_dress.jpg';
+import './Motif.css';
 
 const Motif = () => {
   const swatchStyle = (color) => ({
@@ -36,6 +39,7 @@ const Motif = () => {
     justifyContent: 'space-around',
     flexWrap: 'wrap',
     gap: '2rem',
+    font: 'dubai',
   };
 
   const attireBox = {
@@ -46,42 +50,59 @@ const Motif = () => {
     backgroundColor: '#f9f9f9',
   };
 
+  const imageStyle = {
+    marginTop: '1rem',
+    display: 'block',
+    width: 'auto',//'100%',
+    maxWidth: '300px',
+    borderRadius: '8px',
+  };
+
   const colors = [
     { name: 'Light Brown', code: '#D2B48C' },
-    { name: 'Medium Brown', code: '#A0522D' },
-    { name: 'Dark Brown', code: '#5C4033' },
-    { name: 'Green', code: '#3E885B' },
     { name: 'Gold', code: '#b4975a' },
+    { name: 'Brown', code: '#9f5736ff' },
+    { name: 'Dark Brown', code: '#5C4033' },
+    { name: 'Green', code: '#9CAF88' },
   ];
 
   return (
-    <section id="motif" className="page-section">
-      <div style={sectionStyle}>
-        <h2 className="text-3xl font-bold mb-4 text-center">Motif</h2>
+    <section id="motif" className="motif-section"> 
+      <div className="content" style={sectionStyle}> 
+        {/* Motif Title: font-calisto */}
+        <h2 className="text-4xl md:text-5xl font-calisto mb-4 text-center">Dress Code</h2>
 
-        <h3 className="text-xl font-semibold mb-2">Motif Colors</h3>
+        {/* Motif Colors Subtitle: font-dubai-reg */}
+        <h3 className="text-xl font-dubai-reg mb-2">Motif Colors</h3>
         <div style={swatchContainer}>
           {colors.map((color) => (
-            <div key={color.name} style={{ textAlign: 'center', margin: '0 8px' }}>
+            <div key={color.name} style={{ textAlign: 'center', margin: '0 8px'}}>
               <div style={swatchStyle(color.code)} title={color.name}></div>
-              <div style={labelStyle}>{color.name}</div>
+              {/* Color Names: font-dubai (example) */}
+              <div style={labelStyle} className="font-dubai">{color.name}</div>
             </div>
           ))}
         </div>
 
         <div style={attireStyle}>
           <div style={attireBox}>
-            <h3>For the Gentlemen</h3>
-            <p>
-              Think barong, dark suits, earth tones. Brown shades? Perfect. Green accents? Cool. Gold details? Sure, if you’re feeling fancy. Just no neon, please 😅.
+            {/* Gentleman Title: font-dubai-reg (example) */}
+            <h3 className="font-dubai"><strong>For the Gentlemen</strong></h3>
+            {/* Description: font-dubai (example) */}
+            <p className="font-dubai">
+              Dark suits and formal shoes.
             </p>
+            <img src={sampleMaleColors} alt="Sample male attire colors" style={imageStyle}  />
           </div>
 
           <div style={attireBox}>
-            <h3>For the Ladies</h3>
-            <p>
-              Flowing dresses in brown, gold, or forest green. Go soft and elegant — no pressure to match exactly, just stay in the vibe 🌿✨.
+            {/* Ladies Title: font-dubai-reg (example) */}
+            <h3 className="font-dubai"><strong>For the Ladies</strong></h3>
+            {/* Description: font-dubai (example) */}
+            <p className="font-dubai">
+              Flowing dresses in browns, gold or green. Avoid stilleto high heels.
             </p>
+            <img src={sampleFemaleColors} alt="Sample women attire colors" style={imageStyle}  />
           </div>
         </div>
       </div>

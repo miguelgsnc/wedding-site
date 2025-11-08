@@ -1,0 +1,78 @@
+.gifts-section {
+  min-height: 100vh;
+  background-image: url('../images/gifts.jpg');
+  background-size: auto 100%; /* fits height, width adjusts automatically */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  position: relative;
+
+}
+
+/* Overlay for text readability 
+.bg-overlay {
+  background: rgba(92, 78, 0, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+  */
+
+/* Full-screen overlay */
+.gifts-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* dark overlay */
+  z-index: 0;
+}
+
+/* Make sure content appears above overlay */
+.gifts-section .content {
+  position: relative;
+  z-index: 1;
+}
+
+
+@font-face {
+  font-family: calisto;
+  src: url(/public/CALIST.TTF);
+}
+.font-calisto {
+  font-family: calisto;
+}
+
+@font-face {
+  font-family: dubai;
+  src: url(/public/DUBAI-LIGHT.TTF);
+}
+.font-dubai {
+  font-family: dubai;
+}
+
+@font-face {
+  font-family: dubai-reg;
+  src: url(/public/DUBAI-REGULAR.TTF);
+}
+.font-dubai-reg {
+  font-family: dubai-reg;
+}
+
+/* For "We are getting married!" */
+.text-hours {
+  font-size: 20px; /* Base size for mobile */
+}
+@media (min-width: 768px) {
+  .text-hours-md {
+    font-size: 24px; /* Larger size for desktop */
+  }
+}
+
+/* For Date and Location */
+.text-transport {
+  font-size: 12px; /* Base size for mobile */
+}
+@media (min-width: 768px) {
+  .text-transport-md {
+    font-size: 14px; /* Larger size for desktop */
+  }
+}

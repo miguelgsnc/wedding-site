@@ -9,6 +9,7 @@ import Motif from "./sections/Motif";
 import WeddingGifts from "./sections/WeddingGifts";
 import TravelGuide from "./sections/TravelGuide";
 import RSVP from "./sections/RSVP";
+import MusicPlayer from "./sections/MusicPlayer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <RSVP />
       <WeddingGifts />
       <TravelGuide />
+      <MusicPlayer />
     </div>
   );
 }

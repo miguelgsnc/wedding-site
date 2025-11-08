@@ -1,0 +1,64 @@
+.motif-section {
+  min-height: 100vh;
+  background-image: url('../images/motif.jpg');
+  background-size: auto 100%; /* fits height, width adjusts automatically */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-family: serif;
+}
+
+/* Full-screen overlay */
+.motif-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+/* Make sure content appears above overlay */
+.motif-section .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Layout for each map/info pair */
+.motif-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.motif-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+@font-face {
+  font-family: calisto;
+  src: url(/public/CALIST.TTF);
+}
+.font-calisto {
+  font-family: calisto;
+}
+
+@font-face {
+  font-family: dubai;
+  src: url(/public/DUBAI-LIGHT.TTF);
+}
+.font-dubai {
+  font-family: dubai;
+}
+
+@font-face {
+  font-family: dubai-reg;
+  src: url(/public/DUBAI-REGULAR.TTF);
+}
+.font-dubai-reg {
+  font-family: dubai-reg;
+}

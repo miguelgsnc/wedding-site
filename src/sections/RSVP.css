@@ -1,0 +1,107 @@
+.rsvp-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../images/rsvp1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* White semi-transparent overlay */
+.rsvp-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* white overlay */
+  z-index: 0;
+}
+
+/* Ensures text and form appear above overlay */
+.rsvp-content {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Basic form element styling */
+.rsvp-content input,
+.rsvp-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.rsvp-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 0.75rem;
+  background-color: beige;
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e6c988;
+}
+
+.radio-group {
+    /* Displays the two main options (Sí/No) side-by-side */
+    display: flex;
+    justify-content: space-between; /* Spreads them out a bit */
+    gap: 1rem;
+    padding: 0.75rem; /* Add some padding to look like other inputs */
+    /*border: 1px solid #ccc; /* Add a border to visually group them */
+    /*border-radius: 0.5rem;
+    /*background-color: #fff; /* Optional: give it a background */
+}
+
+.radio-label {
+    /* Makes the label content (text + radio) display horizontally */
+    display: flex; 
+    align-items: center; /* Vertically aligns the text and radio button */
+    gap: 0.5rem; /* Space between the text and the radio button */
+    cursor: pointer;
+    font-size: 1rem; /* Ensures text size consistency */
+}
+
+/* This is essential to prevent the radio button from taking the full width */
+.radio-label input[type="radio"] {
+    width: auto; /* Override the general input style */
+    padding: 0;
+    margin: 0; /* Remove default margins if necessary */
+    border: none;
+}
+
+@font-face {
+  font-family: calisto;
+  src: url(/public/CALIST.TTF);
+}
+.font-calisto {
+  font-family: calisto;
+}
+
+@font-face {
+  font-family: dubai;
+  src: url(/public/DUBAI-LIGHT.TTF);
+}
+.font-dubai {
+  font-family: dubai;
+}
+
+@font-face {
+  font-family: dubai-reg;
+  src: url(/public/DUBAI-REGULAR.TTF);
+}
+.font-dubai-reg {
+  font-family: dubai-reg;
+}

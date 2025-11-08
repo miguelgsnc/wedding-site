@@ -1,41 +1,19 @@
-import React from 'react';
+// File: src/sections/Location.js
+import React from "react";
+import "./Location.css";
 
-const Location = () => {
-  const wrapperStyle = {
-    maxWidth: '1000px',
-    margin: '0 auto',
-    textAlign: 'center',
-  };
-
-  const locationItemStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: '2rem',
-    marginBottom: '3rem',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
-
-  const mapStyle = {
-    flex: '2',
-    minWidth: '280px',
-    maxWidth: '500px',
-  };
-
-  const infoStyle = {
-    flex: '1',
-    minWidth: '200px',
-  };
-
+export default function Location() {
   return (
-    <section id="location" className="page-section" style={{ padding: '2rem' }}>
-      <div style={wrapperStyle}>
-        <h2 className="text-3xl font-bold mb-4 text-center">Location</h2>
+    <section
+      id="location"
+      className="location-section flex flex-col justify-center text-center px-6 py-20"
+    >
+      <div className="content max-w-5xl mx-auto p-8">
+        <h2 className="text-4xl md:text-5xl font-calisto mb-10">Locations</h2>
 
         {/* Ceremony */}
-        <div style={locationItemStyle}>
-          <div style={mapStyle}>
+        <div className="location-item mb-12">
+          <div className="map-container">
             <iframe
               title="Cebu Metropolitan Cathedral"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.723178465512!2d123.9004149!3d10.2955818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99be1f30d6595%3A0x8f77289aca9e9b7a!2sCebu%20Metropolitan%20Cathedral!5e0!3m2!1sen!2sph!4v1723059501472!5m2!1sen!2sph"
@@ -46,15 +24,17 @@ const Location = () => {
               loading="lazy"
             ></iframe>
           </div>
-          <div style={infoStyle}>
-            <h3>Ceremony</h3>
-            <p><strong>Cebu Metropolitan Cathedral</strong></p>
+          <div className="location-info">
+            <h3 className="text-2xl font-dubai-reg mb-1">Church Ceremony</h3>
+            <p className="text-lg font-dubai">
+              Cebu Metropolitan Cathedral <br/>Cebu City
+            </p>
           </div>
         </div>
 
         {/* Reception */}
-        <div style={locationItemStyle}>
-          <div style={mapStyle}>
+        <div className="location-item">
+          <div className="map-container">
             <iframe
               title="Chateau By The Sea"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4075285804896!2d124.0241142!3d10.3149645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a996fbc439eacf%3A0x50139eb7406ef6c6!2sChateau%20By%20The%20Sea!5e0!3m2!1sen!2sph!4v1723056934450!5m2!1sen!2sph"
@@ -65,14 +45,14 @@ const Location = () => {
               loading="lazy"
             ></iframe>
           </div>
-          <div style={infoStyle}>
-            <h3>Reception</h3>
-            <p><strong>Chateau By The Sea</strong></p>
+          <div className="location-info">
+            <h3 className="text-2xl font-dubai-reg mb-1">Reception</h3>
+            <p className="text-lg font-dubai">
+              Chateau By The Sea,<br/>Mactan Island
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Location;
+}

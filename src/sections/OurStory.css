@@ -1,0 +1,41 @@
+.our-story-section {
+  min-height: 100vh;
+  background-image: url('../images/desert2.jpg');
+  background-size: auto 100%; /* fits height, width adapts */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  position: relative;
+  /*font-family: serif; */
+}
+
+/* Overlay for text readability */
+.bg-overlay-our-story {
+  background: rgba(255, 255, 255, 0.7); /* white overlay */
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+@font-face {
+  font-family: calisto;
+  src: url(/public/CALIST.TTF);
+}
+.font-calisto {
+  font-family: calisto;
+}
+
+@font-face {
+  font-family: dubai;
+  src: url(/public/DUBAI-LIGHT.TTF);
+}
+.font-dubai {
+  font-family: dubai;
+}
+
+@font-face {
+  font-family: dubai-reg;
+  src: url(/public/DUBAI-REGULAR.TTF);
+}
+.font-dubai {
+  font-family: dubai-reg;
+}

@@ -1,17 +1,32 @@
 import React from 'react';
-
+import "./WeddingGifts.css";
 const WeddingGifts = () => {
   return (
-    <section id="gifts" className="page-section py-8 px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4 text-center">Gifts (But Really, No Pressure!)</h2>
-      <p className="mb-6 max-w-xl mx-auto">
-        Your presence at our wedding is the best gift we could ask for — seriously! But if you’re the type who insists on giving something (you sweet soul), we’re going a bit crypto-funky. 💸🪙
+    <section
+      id="gifts"
+      className="gifts-section flex flex-col justify-center text-center px-6 py-20"
+    >
+      <div className="content max-w-5xl mx-auto p-8">
+        <h2 className="text-4xl md:text-5xl font-calisto mb-10">A Note on Gifts</h2>
+      <p className="mb-6 max-w-xl font-dubai-reg mx-auto">
+        Your presence at our wedding is the greatest gift of all! However, if you
+        wish to honor us with a gift, we would greatly appreciate it.
+        <br/>
+        
       </p>
-      <p className="mb-4 font-semibold">You can send us some <span className="text-yellow-500">Charocoin</span> — if you're into that sort of thing:</p>
-      <p className="bg-gray-100 p-4 rounded-md font-mono text-sm inline-block select-all">
-        5tKS3bBga3wAxLyEodBXN5aMmdjHdB8bA9jQkb3Kx7hh
+      <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
+        BDO Account Number (PHP) <br/> 000-8704-253-74 <br/> Maria Tiza Bual
       </p>
-      <p className="mt-6 text-gray-600">We’ll be forever grateful… and we promise not to sell the top (unless it moons 🚀).</p>
+      <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
+        BBVA Account Number (EUR) <br/> ES19-0182-5584-2402-0853-9610 <br/> Miguel Garcia San Nicolas Cantero
+      </p>
+      <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
+        ENBD Account Number (AED) <br/> AE35-0260-0010-1579-8752-301 <br/> Miguel Garcia San Nicolas Cantero
+      </p>
+      <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
+        Metamask wallet (USDC) <br/> 
+      </p>
+      </div>
     </section>
   );
 };
