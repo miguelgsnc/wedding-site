@@ -8,7 +8,7 @@ export default function Schedule() {
       <div className="content max-w-5xl mx-auto p-8">
         <h2 className="text-4xl md:text-5xl font-calisto mb-6">Wedding Day Program</h2><br/><br/>
         <p className="text-hours text-hours-md font-dubai-reg">
-        <strong>— 14:30 —</strong><br/>Church Ceremony<br/><br/>
+        <strong>— 14:00 —</strong><br/>Church Ceremony<br/><br/>
         </p>
         <p className="text-transport text-transport-md font-dubai-reg">
         * Transportation to Reception Venue will be provided<br/><br/><br/>

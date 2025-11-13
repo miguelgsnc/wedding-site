@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./RSVP.css";
 
 export default function RSVPForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ export default function RSVPForm() {
     allergyDetails: ""
   });
 
+
+  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -25,11 +28,11 @@ export default function RSVPForm() {
       "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdoo2EP37DAgUvIyuzoVt-TeMC2VZ3Vly7eVtLZzi4To04YRQ/formResponse";
 
     const data = new FormData();
-    data.append("entry.1641324281", formData.name);           // Nombre y Apellidos
-    data.append("entry.905752416", formData.companion);       // Nombre de acompañante
-    data.append("entry.1919643671", formData.code);           // Código
-    data.append("entry.139186207", formData.attending);       // Asistencia
-    data.append("entry.373463721", formData.allergyDetails);  // Alergias
+    data.append("entry.1641324281", formData.name);
+    data.append("entry.905752416", formData.companion);
+    data.append("entry.1919643671", formData.code);
+    data.append("entry.139186207", formData.attending);
+    data.append("entry.373463721", formData.allergyDetails);
 
     fetch(formUrl, {
       method: "POST",
@@ -37,7 +40,7 @@ export default function RSVPForm() {
       body: data
     })
       .then(() => {
-        alert("✅ RSVP submitted successfully!");
+        alert("✅ RSVP enviado correctamente!");
         setFormData({
           name: "",
           companion: "",
@@ -47,82 +50,114 @@ export default function RSVPForm() {
           allergyDetails: ""
         });
       })
-      .catch(() => alert("⚠️ Something went wrong, try again."));
+      .catch(() => alert("⚠️ Algo salió mal, inténtalo de nuevo."));
   };
 
   return (
-    <section id="rsvp" style={{ padding: "2rem", background: "#f8f8f8" }}>
-      <h2 className="text-3xl font-bold mb-4 text-center">RSVP</h2>
-      <h3 className="text-xl font-semibold mb-2 text-center">Let us know if we will count with you!</h3>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          maxWidth: "600px",
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem"
-        }}
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Nombre y Apellidos"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <section id="rsvp" className="rsvp-section" style={{ padding: "2rem" }}>
+      <div className="rsvp-content max-w-xl mx-auto text-center relative z-10">
+        <br/><h2 className="text-4xl md:text-5xl font-calisto mb-4">RSVP</h2><br/>
+        <h3 className="text-xl font-dubai-reg mb-2">
+          Let us know if we will count with you!
+        </h3>
+        <p className="font-dubai mb-2">
+          Kindly RSVP by the end of <strong>February 2026</strong>
+        </p>
+        <br/><br/><br/>
 
-        <input
-          type="text"
-          name="companion"
-          placeholder="Nombre de acompañante (si aplica)"
-          value={formData.companion}
-          onChange={handleChange}
-        />
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            maxWidth: "600px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem"
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Name and last name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="text"
-          name="code"
-          placeholder="Código de invitación"
-          value={formData.code}
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="text"
+            name="companion"
+            placeholder="Name of companion(s) (if any)"
+            value={formData.companion}
+            onChange={handleChange}
+          />
 
-        <div>
-          <label>
-            <input
-              type="radio"
-              name="attending"
-              value="Sí"
-              checked={formData.attending === "Sí"}
-              onChange={handleChange}
-              required
-            />{" "}
-            Sí, asistiré
-          </label>
-          <br />
-          <label>
-            <input
-              type="radio"
-              name="attending"
-              value="No"
-              checked={formData.attending === "No"}
-              onChange={handleChange}
-            />{" "}
-            No podré asistir
-          </label>
-        </div>
+          <input
+            type="text"
+            name="code"
+            placeholder="Invitation Code"
+            value={formData.code}
+            onChange={handleChange}
+            required
+          />
 
-        <label>
+          <div className="radio-group font-dubai-reg">
+            <label className="radio-label">
+              <strong>Yes, I'll go!</strong>
+              <input
+                type="radio"
+                name="attending"
+                value="Sí"
+                checked={formData.attending === "Sí"}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            
+
+            
+            <label className="radio-label">
+              <strong>No, I can't</strong>
+              <input
+                type="radio"
+                name="attending"
+                value="No"
+                checked={formData.attending === "No"}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+    
+
+          <button
+            type="submit"
+            style={{
+              padding: "0.75rem",
+              cursor: "pointer",
+              color: "black",
+              backgroundColor: "beige"
+            }}
+          >
+            Send RSVP
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
+
+
+/*
+
+    <label>
           <input
             type="checkbox"
             name="hasAllergy"
             checked={formData.hasAllergy}
             onChange={handleChange}
           />{" "}
-          Tengo alguna alergia o condición alimentaria
+          Si tienes algun comentario, adelante.
         </label>
 
         {formData.hasAllergy && (
@@ -133,76 +168,4 @@ export default function RSVPForm() {
             onChange={handleChange}
           />
         )}
-
-        <button type="submit" style={{ padding: "0.75rem", cursor: "pointer", color: "black", backgroundColor: "beige" }}>
-          Enviar RSVP
-        </button>
-      </form>
-    </section>
-  );
-}
-
-
-/* import React from "react";
-export default function RSVP() {
-  return (
-    <section
-      id="rsvp"
-      style={{
-        minHeight: "100vh",
-        padding: "2rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        backgroundColor: "#f8f8f8"
-      }}
-    >
-      <h2 style={{ fontSize: "2rem", marginBottom: "1rem", textAlign: "center" }}>
-        RSVP
-      </h2>
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdoo2EP37DAgUvIyuzoVt-TeMC2VZ3Vly7eVtLZzi4To04YRQ/viewform?embedded=true"
-        width="100%"
-        height="900"
-        frameBorder="0"
-        marginHeight="0"
-        marginWidth="0"
-        title="RSVP Form"
-        style={{
-          border: "none",
-          maxWidth: "640px",
-          width: "100%",
-          backgroundColor: "white",
-          borderRadius: "12px",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
-        }}
-      >
-        Loading…
-      </iframe>
-    </section>
-  );
-} */
-
-/* export default function RSVP() {
-  return (
-    <section className="py-16 px-6 bg-white">
-      <h2 className="text-3xl font-bold mb-4 text-center">Confirmación de Asistencia (RSVP)</h2>
-      <div className="max-w-xl mx-auto">
-        <form
-          action="https://docs.google.com/forms/d/e/your-form-id/formResponse"
-          method="POST"
-          target="_blank"
-          className="space-y-4"
-        >
-          <input type="text" name="entry.123456" placeholder="Tu nombre" className="w-full p-2 border rounded" required />
-          <select name="entry.654321" className="w-full p-2 border rounded" required>
-            <option value="">¿Asistirás?</option>
-            <option value="Sí">Sí</option>
-            <option value="No">No</option>
-          </select>
-          <button type="submit" className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">Enviar</button>
-        </form>
-      </div>
-    </section>
-  );
-} */
+*/

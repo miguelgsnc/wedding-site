@@ -15,16 +15,16 @@ const WeddingGifts = () => {
         
       </p>
       <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
-        BDO Account Number (PHP) <br/> 000-8704-253-74 <br/> Maria Tiza Bual
+        BDO Account Number (PHP) <br/> 000 8704 253 74 <br/> Maria Tiza Bual
       </p>
       <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
-        BBVA Account Number (EUR) <br/> ES19-0182-5584-2402-0853-9610 <br/> Miguel Garcia San Nicolas Cantero
+        BBVA Account Number (EUR) <br/> ES19 0182 5584 2402 0853 9610 <br/> Miguel Garcia San Nicolas Cantero
       </p>
       <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
-        ENBD Account Number (AED) <br/> AE35-0260-0010-1579-8752-301 <br/> Miguel Garcia San Nicolas Cantero
+        ENBD Account Number (AED) <br/> AE35 0260 0010 1579 8752 301 <br/> Miguel Garcia San Nicolas Cantero
       </p>
       <p className="border border-gray-700 p-4 rounded-md font-dubai text-sm inline-block mb-2 select-all">
-        Metamask wallet (USDC) <br/> 
+        Metamask Wallet <br/> 0xCCcE09a066eAC407D5D1BA75e<br/>34D3cb4D2E03eeb
       </p>
       </div>
     </section>

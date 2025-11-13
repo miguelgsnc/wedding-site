@@ -90,7 +90,7 @@ const Motif = () => {
             <h3 className="font-dubai"><strong>For the Gentlemen</strong></h3>
             {/* Description: font-dubai (example) */}
             <p className="font-dubai">
-              Dark suits and formal shoes.
+              Come in dark suits and formal shoes. Ties are optional.
             </p>
             <img src={sampleMaleColors} alt="Sample male attire colors" style={imageStyle}  />
           </div>
@@ -100,8 +100,9 @@ const Motif = () => {
             <h3 className="font-dubai"><strong>For the Ladies</strong></h3>
             {/* Description: font-dubai (example) */}
             <p className="font-dubai">
-              Flowing dresses in browns, gold or green. Avoid stilleto high heels.
-            </p>
+              Wear your finest long dresses in shades of brown, gold, or green. 
+
+Heels are great, but consider block or wedge instead of stilletos for the reception.            </p>
             <img src={sampleFemaleColors} alt="Sample women attire colors" style={imageStyle}  />
           </div>
         </div>
